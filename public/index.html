@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arthur Carvalho Rotkis</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="language-btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg" alt="Bandeira Brasil" />
+            </a>
+            <a href="index_en.html" class="language-btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg" alt="Bandeira EUA" />
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <div class="intro-content">
+                <h1>Arthur Carvalho Rotkis</h1>
+                <h2>Desenvolvedor e Explorador de Tecnologia</h2>
+                <div class="social-icons">
+                    <a href="https://github.com/rotkis" target="_blank" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" id="email" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/arthur-carvalho-rotkis-028812234/" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="curriculo.pdf" target="_blank" title="Currículo">
+                        <i class="fas fa-file"></i>
+                    </a>
+                </div>
+                <p id="message"></p> <!-- Mensagem de feedback ao copiar o email -->
+            </div>
+        </section>
+
+        <section class="about-me">
+          <h3>Sobre mim</h3>
+          <p>Sou desenvolvedor Java com 6 meses de experiência e estudante de Ciência da Computação. Durante minha jornada, participei de maratonas de programação, onde desenvolvi fortes habilidades em algoritmos. Concluí diversos projetos de diferentes níveis de complexidade, que você pode ver abaixo. Além disso, sou formado em um curso técnico de Automação Industrial.</p>
+        </section>
+      
+        <section class="projects">
+            <h2>Projetos</h2>
+            <div class="project-list">
+                <!-- Espaço para listar projetos -->
+                <p>Em breve, mais projetos estarão disponíveis!</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Função para copiar o email
+        document.getElementById('email').addEventListener('click', function (e) {
+            e.preventDefault();
+            const email = 'rotkisarthur@gmail.com';
+            const tempInput = document.createElement('input');
+            document.body.appendChild(tempInput);
+            tempInput.value = email;
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            // Exibir a mensagem de email copiado
+            const message = document.getElementById('message');
+            message.textContent = 'Email copiado!';
+            setTimeout(() => message.textContent = '', 2000); // Mensagem some após 2 segundos
+        });
+    </script>
+
+</body>
+
+</html>
