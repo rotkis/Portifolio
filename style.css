@@ -130,7 +130,6 @@ main {
 
 /* Seção Tecnologias */
 .technologies {
-    color: #203a43;
     margin: 50px 0;
     margin-top: 5%;
     text-align: center;
@@ -142,8 +141,6 @@ main {
 }
 
 .tech-list {
-    color: #203a43;
-    
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -152,8 +149,7 @@ main {
 }
 
 .tech-list span {
-    color: #203a43;
-    background-color: #00c3ff;
+    background-color: #0d884e6b;
     padding: 10px 15px;
     border-radius: 5px;
 }
