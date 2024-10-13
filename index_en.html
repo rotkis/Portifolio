@@ -15,8 +15,8 @@
             <a href="index.html" class="language-btn">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg" alt="Brazil Flag" />
             </a>
-            <a href="index_en.html" class="language-btn">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg" alt="US Flag" />
+            <a href="index_pt.html" class="language-btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg" alt="USA Flag" />
             </a>
         </nav>
     </header>
@@ -29,37 +29,52 @@
                 <div class="social-icons">
                     <a href="https://github.com/rotkis" target="_blank" title="GitHub">
                         <i class="fab fa-github"></i>
+                        <span>GitHub</span>
                     </a>
                     <a href="#" id="email" title="Email">
                         <i class="fas fa-envelope"></i>
+                        <span>Email</span>
                     </a>
                     <a href="https://www.linkedin.com/in/arthur-carvalho-rotkis-028812234/" target="_blank" title="LinkedIn">
                         <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
                     </a>
-                    <a href="curriculum.pdf" target="_blank" title="Resume">
+                    <a href="https://docs.google.com/document/d/1gnnmihc180Up99AKqVigidXgFWklQeSRixIlWLtX-gw/export?format=pdf" target="_blank" title="Resume">
                         <i class="fas fa-file"></i>
+                        <span>Resume</span>
                     </a>
                 </div>
-                <p id="message"></p> <!-- Email copy feedback message -->
+                <p id="message"></p> <!-- Feedback message for email copy -->
             </div>
         </section>
 
-	<section class="about-me">
-		<h3>About me</h3>
-		<p>I am a Java developer with 6 months of experience and a Computer Science student. During my journey, I participated in programming marathons where I developed strong skills in algorithms. I've completed several projects of varying complexity, which you can see below. Additionally, I hold a technical degree in Industrial Automation.</p>
-	    </section>
+        <section class="technologies">
+            <h3>Technologies</h3>
+            <br>
+            <div class="tech-list">
+                <span>Java</span>
+                <span>HTML/CSS/JS</span>
+                <span>NodeJs</span>
+                <span>SQL</span>
+                <span>Git</span>
+            </div>
+        </section>
+
+        <section class="about-me" id="about-me">
+            <h3>About Me</h3>
+            <p>I am a Java developer with 6 months of experience and a Computer Science student. Throughout my journey, I participated in programming marathons, where I developed strong algorithm skills. I have completed various projects of different levels of complexity, which you can see below. Additionally, I have a technical degree in Industrial Automation.</p>
+        </section>
 
         <section class="projects">
             <h2>Projects</h2>
             <div class="project-list">
-                <!-- Space for project listing -->
-                <p>More projects coming soon!</p>
+                <p>Coming soon, more projects will be available!</p>
             </div>
         </section>
     </main>
 
     <script>
-        // Email copy function
+        // Function to copy email
         document.getElementById('email').addEventListener('click', function (e) {
             e.preventDefault();
             const email = 'rotkisarthur@gmail.com';
@@ -70,10 +85,23 @@
             document.execCommand('copy');
             document.body.removeChild(tempInput);
 
-            // Show "Email copied!" message
+            // Display email copied message
             const message = document.getElementById('message');
             message.textContent = 'Email copied!';
             setTimeout(() => message.textContent = '', 2000); // Message disappears after 2 seconds
+        });
+
+        // Change background color on scroll
+        window.addEventListener('scroll', function () {
+            const aboutMeSection = document.getElementById('about-me');
+            const sectionPosition = aboutMeSection.getBoundingClientRect().top;
+            const viewportHeight = window.innerHeight;
+
+            if (sectionPosition < viewportHeight * 0.8) {
+                document.body.classList.add('new-background');
+            } else {
+                document.body.classList.remove('new-background');
+            }
         });
     </script>
 

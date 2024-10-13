@@ -29,22 +29,38 @@
                 <div class="social-icons">
                     <a href="https://github.com/rotkis" target="_blank" title="GitHub">
                         <i class="fab fa-github"></i>
+                        <span>GitHub</span>
                     </a>
                     <a href="#" id="email" title="Email">
                         <i class="fas fa-envelope"></i>
+                        <span>Email</span>
                     </a>
                     <a href="https://www.linkedin.com/in/arthur-carvalho-rotkis-028812234/" target="_blank" title="LinkedIn">
                         <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
                     </a>
-                    <a href="curriculo.pdf" target="_blank" title="Currículo">
+                    <a href="https://docs.google.com/document/d/1gnnmihc180Up99AKqVigidXgFWklQeSRixIlWLtX-gw/export?format=pdf" target="_blank" title="Currículo">
                         <i class="fas fa-file"></i>
+                        <span>Currículo</span>
                     </a>
                 </div>
                 <p id="message"></p> <!-- Mensagem de feedback ao copiar o email -->
             </div>
         </section>
 
-        <section class="about-me">
+        <section class="technologies">
+            <h3>Tecnologias</h3>
+            <br>
+            <div class="tech-list">
+                <span>Java</span>
+                <span>HTML/CSS/JS</span>
+                <span>NodeJs</span>
+                <span>SQL</span>
+                <span>Git</span>
+            </div>
+        </section>
+
+        <section class="about-me" id="about-me">
           <h3>Sobre mim</h3>
           <p>Sou desenvolvedor Java com 6 meses de experiência e estudante de Ciência da Computação. Durante minha jornada, participei de maratonas de programação, onde desenvolvi fortes habilidades em algoritmos. Concluí diversos projetos de diferentes níveis de complexidade, que você pode ver abaixo. Além disso, sou formado em um curso técnico de Automação Industrial.</p>
         </section>
@@ -52,7 +68,6 @@
         <section class="projects">
             <h2>Projetos</h2>
             <div class="project-list">
-                <!-- Espaço para listar projetos -->
                 <p>Em breve, mais projetos estarão disponíveis!</p>
             </div>
         </section>
@@ -75,6 +90,17 @@
             message.textContent = 'Email copiado!';
             setTimeout(() => message.textContent = '', 2000); // Mensagem some após 2 segundos
         });
+        window.addEventListener('scroll', function () {
+    const aboutMeSection = document.getElementById('about-me');
+    const sectionPosition = aboutMeSection.getBoundingClientRect().top;
+    const viewportHeight = window.innerHeight;
+
+    if (sectionPosition < viewportHeight * 0.8) {
+        document.body.classList.add('new-background');
+    } else {
+        document.body.classList.remove('new-background');
+    }
+});
     </script>
 
 </body>

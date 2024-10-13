@@ -8,6 +8,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    transition: background 0.5s ease;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -19,7 +20,7 @@ body {
 header {
     position: absolute;
     top: 20px;
-    width: 100%;
+    right: 20px; /* Coloca as bandeiras no lado direito */
     text-align: center;
 }
 
@@ -77,7 +78,6 @@ main {
     color: #00c3ff;
     font-weight: 300;
     margin-top: 10px;
-    
 }
 
 #message {
@@ -88,37 +88,101 @@ main {
 
 /* Estilo para ícones sociais */
 .social-icons {
-    margin-top: 20px;
+    margin-top: 80px;
     display: flex;
     gap: 20px;
+    transition: 0.3s;
 }
 
 .social-icons a {
+    text-decoration: none;
     color: #00c3ff;
     font-size: 2em;
     transition: color 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Coloca ícone e nome em coluna */
+    align-items: center; /* Centraliza o texto abaixo dos ícones */
+    transition: 0.3s;
+}
+.social-icons span {
+    text-decoration: none;
+    transition: 0.3s;
+}
+.social-icons a span {
+    font-size: 0.8em;
+    margin-top: 5px; /* Espaço entre ícone e texto */
 }
 
 .social-icons a:hover {
     color: #FFF;
+    transition: 0.3s;
+    .social-icons i {
+        height: 0.5em;
+        width: 0.5em;
+        transition: 0.3s;
+        
+    }
+    .social-icons span {
+        font-size: 0.5em;
+        transition: 0.3s;
+    }
+}
+
+/* Seção Tecnologias */
+.technologies {
+    color: #203a43;
+    margin: 50px 0;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.technologies h3 {
+    font-size: 1.8em;
+    color: #00c3ff;
+}
+
+.tech-list {
+    color: #203a43;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+
+}
+
+.tech-list span {
+    color: #203a43;
+    background-color: #00c3ff;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+/* Estilo para a nova seção */
+.new-background {
+    background: linear-gradient(135deg, #03080c, #0e3294);
 }
 
 /* Seção Sobre mim */
 .about-me {
     margin-top: 10px;
-    text-align: center;
+    text-align: justify; /* Justifica o texto */
     font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
     color: #00c3ff;
 }
 
 .about-me h3 {
     font-size: 1.8em;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    margin: 0 15%;
 }
 
 .about-me p {
+    color: #88eb9d;
+    margin-top: 20px;
     font-size: 1.2em;
     margin: 0 15%;
+    
 }
 
 /* Seção de Projetos */
@@ -170,8 +234,3 @@ main {
         font-size: 1.2em;
     }
 }
-
-
-
-
-
