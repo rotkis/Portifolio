@@ -1,0 +1,69 @@
+/* 
+ * Dark Mode Styles
+ * These styles are applied when the dark-mode class is present
+ */
+
+.App.dark-mode {
+  --primary: #60a5fa;
+  --primary-light: #93c5fd;
+  --primary-dark: #3b82f6;
+  --secondary: #22d3ee;
+  --accent: #818cf8;
+  --background-dark: #030712;
+  --background-light: #111827;
+  --text-light: #f9fafb;
+  --text-muted: #9ca3af;
+}
+
+.App.dark-mode body {
+  background: linear-gradient(135deg, var(--background-dark), var(--background-light));
+}
+
+.App.dark-mode .new-background {
+  background: linear-gradient(135deg, #030712, #1e3a8a);
+}
+
+.App.dark-mode .social-icons a {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.App.dark-mode .professional-summary,
+.App.dark-mode .experience-item,
+.App.dark-mode .education-item,
+.App.dark-mode .project-item {
+  background-color: rgba(15, 23, 42, 0.3);
+  border-color: var(--primary-dark);
+}
+
+.App.dark-mode .tech-list span {
+  background-color: rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.2);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--text-light);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: var(--space-xs);
+  border-radius: var(--border-radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-normal);
+}
+
+.theme-toggle:hover {
+  color: var(--primary);
+  transform: rotate(15deg);
+}
+
+.theme-toggle i {
+  transition: transform 0.5s ease;
+}
+
+.theme-toggle:hover i {
+  transform: rotate(30deg);
+}

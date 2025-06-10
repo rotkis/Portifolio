@@ -1,0 +1,275 @@
+/* 
+ * Responsive Design Enhancements
+ * Additional styles to ensure cross-device compatibility
+ */
+
+/* Tablet Adjustments (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .intro h1 {
+    font-size: 2.8rem;
+  }
+  
+  .intro h2 {
+    font-size: 1.4rem;
+  }
+  
+  .social-icons {
+    margin-top: var(--space-xl);
+  }
+  
+  .project-list {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+  
+  section {
+    padding: var(--space-lg) var(--space-md);
+  }
+  
+  .professional-summary,
+  .experience-item,
+  .education-item,
+  .project-item {
+    padding: var(--space-md);
+  }
+}
+
+/* Mobile Landscape Adjustments (480px - 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+  #root {
+    padding: var(--space-md);
+  }
+  
+  header {
+    top: var(--space-md);
+    right: var(--space-md);
+  }
+  
+  .intro {
+    min-height: 70vh;
+  }
+  
+  .intro h1 {
+    font-size: 2.2rem;
+    margin-top: 50px;
+  }
+  
+  .intro h2 {
+    font-size: 1.2rem;
+    margin-bottom: var(--space-lg);
+  }
+  
+  .location {
+    font-size: 0.9rem;
+  }
+  
+  .social-icons {
+    margin-top: var(--space-lg);
+    gap: var(--space-sm);
+  }
+  
+  .social-icons a {
+    min-width: 65px;
+    padding: var(--space-sm);
+  }
+  
+  .social-icons a i {
+    font-size: 1.5rem;
+  }
+  
+  section h3 {
+    font-size: 1.6rem;
+  }
+  
+  .experience-header h4,
+  .education-header h4,
+  .project-item h4 {
+    font-size: 1.2rem;
+  }
+  
+  .tech-list {
+    gap: var(--space-sm);
+  }
+}
+
+/* Mobile Portrait Adjustments (< 480px) */
+@media (max-width: 479px) {
+  #root {
+    padding: var(--space-sm);
+  }
+  
+  header {
+    top: var(--space-sm);
+    right: var(--space-sm);
+  }
+  
+  nav {
+    padding: var(--space-xs) var(--space-xs);
+  }
+  
+  .language-btn img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .theme-toggle {
+    font-size: 1rem;
+  }
+  
+  .intro {
+    min-height: 60vh;
+  }
+  
+  .intro h1 {
+    font-size: 1.8rem;
+    margin-top: 40px;
+  }
+  
+  .intro h2 {
+    font-size: 1rem;
+    margin-bottom: var(--space-md);
+  }
+  
+  .location {
+    font-size: 0.8rem;
+    margin-bottom: var(--space-lg);
+  }
+  
+  .social-icons {
+    margin-top: var(--space-md);
+    gap: var(--space-xs);
+  }
+  
+  .social-icons a {
+    min-width: 55px;
+    padding: var(--space-xs);
+  }
+  
+  .social-icons a i {
+    font-size: 1.3rem;
+    margin-bottom: var(--space-xs);
+  }
+  
+  .social-icons a span {
+    font-size: 0.7rem;
+  }
+  
+  section {
+    padding: var(--space-md) var(--space-sm);
+  }
+  
+  section h3 {
+    font-size: 1.4rem;
+    margin-bottom: var(--space-md);
+  }
+  
+  section h3::after {
+    width: 40px;
+    height: 3px;
+  }
+  
+  .professional-summary p,
+  .experience-description li,
+  .education-details li,
+  .project-item p {
+    font-size: 0.9rem;
+  }
+  
+  .experience-header h4,
+  .education-header h4,
+  .project-item h4 {
+    font-size: 1.1rem;
+  }
+  
+  .experience-meta,
+  .education-meta {
+    font-size: 0.8rem;
+  }
+  
+  .tech-list {
+    gap: var(--space-xs);
+  }
+  
+  .tech-list span {
+    font-size: 0.8rem;
+    padding: var(--space-xs) var(--space-sm);
+  }
+  
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+  
+  footer {
+    font-size: 0.8rem;
+    padding: var(--space-md);
+  }
+}
+
+/* Print Media Styles */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  
+  header, 
+  .theme-toggle,
+  footer {
+    display: none;
+  }
+  
+  .intro h1 {
+    color: black;
+  }
+  
+  .intro h2 {
+    color: #333;
+  }
+  
+  section h3 {
+    color: #333;
+  }
+  
+  section h3::after {
+    background: #333;
+  }
+  
+  .social-icons {
+    display: none;
+  }
+  
+  .professional-summary,
+  .experience-item,
+  .education-item,
+  .project-item {
+    background: white;
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+  
+  .tech-list span {
+    background: #f0f0f0;
+    color: #333;
+  }
+}
+
+/* Accessibility Enhancements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.screen-reader-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
